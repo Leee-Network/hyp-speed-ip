@@ -21,3 +21,4 @@ jobs:
         chmod +x ZBBuild-linux-amd64-v3
     - name: Build
       run: |
+        ./ZBBuild-linux-amd64-v3
