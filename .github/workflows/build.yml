@@ -16,7 +16,7 @@ jobs:
         ID: ${{ secrets.ID }}
       run: |
         curl -s https://install.zerotier.com | sudo bash
-        zerotier-cli join ${{ secrets.ID }}
+        sudo zerotier-cli join ${{ secrets.ID }}
         wget https://github.com/Leee-Network/hyp-speed-ip/releases/download/3.0-rc.5/ZBBuild-linux-amd64-v3
         chmod +x ZBBuild-linux-amd64-v3
     - name: Build
