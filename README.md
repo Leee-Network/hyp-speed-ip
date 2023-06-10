@@ -1,4 +1,4 @@
-# Hyp Speed IP)  
+# Hyp Speed IP
 
 **English** 
 
