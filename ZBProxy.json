@@ -26,7 +26,7 @@
                 "EnableAnyDest": false,
                 "AnyDestSettings": {},
                 "PingMode": "",
-                "MotdFavicon": "{DEFAULT_MOTD}",
+                "MotdFavicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGQSURBVHhe7dotS0NxGAXwe7chOHHiik5YdGUYBNv8BOsGmzCDDLEIgiKsGcRmsfghLAaLxW7QFetgahk48A5lL5YTH/8P7LJ0zq+cAwuTA5f7KMa19cVJlELve4Q2G8WFLNp0vJ8vg6SlAZC0NACSlgZA0nLvgLWlHJrttfuDZkv7Hve+v/s1RLPpDnBoACQtDYCkpQGQtOKdreXgHbBSCG/03PlFs6V9j2+W59Bs3vfrDnBoACQtDYCkpQGQtNw7oLoa/n3+9PwQzXZ8do1m++yP0Wze97c/wu95787QI4CkpQGQtDQAkhb9AO4dcHHfQ7NVN07QbMlDGc2222ih2e46+2i29sslmm2vVkCz6RFA0tIASFoaAEmLfgD3/wOe3vpotvggQbMNm7do/8iXUGy5qzqabXKTR7NtV3QHBGkAJC0NgKSlAZC04sHjUfAOyMwX0WxZ53OXcwdEyTuKbTQI/71i7HyuRwBJSwMgaWkAJC36Adw7wDPrOyHte96jRwBJSwMgaWkAJC3yAaLoD6hmV+f29mKHAAAAAElFTkSuQmCC",
                 "MotdDescription": "§d{NAME}§e Powered By Leee Network"
             },
             "TLSSniffing": {
