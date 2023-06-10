@@ -1,7 +1,7 @@
 {
     "Services": [
         {
-            "Name": "HypixelDefault",
+            "Name": "Hypixel Speed IP",
             "TargetAddress": "mc.hypixel.net",
             "TargetPort": 25565,
             "Listen": 25565,
@@ -14,7 +14,7 @@
                 "EnableHostnameRewrite": true,
                 "RewrittenHostname": "",
                 "OnlineCount": {
-                    "Max": 114514,
+                    "Max": 1000,
                     "Online": -1,
                     "EnableMaxLimit": false
                 },
@@ -27,7 +27,7 @@
                 "AnyDestSettings": {},
                 "PingMode": "",
                 "MotdFavicon": "{DEFAULT_MOTD}",
-                "MotdDescription": "§d{NAME}§e service is working on §a§o{INFO}§r\n§c§lProxy for §6§n{HOST}:{PORT}§r"
+                "MotdDescription": "§d{NAME}§e Powered By Leee Network"
             },
             "TLSSniffing": {
                 "RejectNonTLS": false,
