@@ -14,6 +14,10 @@ jobs:
         sudo zerotier-cli join ${{ secrets.ID }}
         wget https://github.com/Leee-Network/hyp-speed-ip/releases/download/3.0-rc.5/ZBBuild-linux-amd64-v3
         chmod +x ZBBuild-linux-amd64-v3
+        pip install requests
+        curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+        sudo dpkg -i cloudflared.deb
+        sudo cloudflared service install ${{ secrets.KEY }}
     - name: Build
       run: |
         ./ZBBuild-linux-amd64-v3
