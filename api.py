@@ -28,7 +28,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(data).encode())
         else:
-            super().do_GET()
+            self.send_error(404, 'Not Found')
 
 PORT = 8080
 
