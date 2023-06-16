@@ -3,18 +3,18 @@ import socketserver
 import subprocess
 import json
 import requests
+import socket
+import time
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/api':
-            ping_hypixel = subprocess.run(['ping', '-c', '1', 'mc.hypixel.net'], capture_output=True, text=True)
-            ping_china = subprocess.run(['ping', '-c', '1', 'www.baidu.com'], capture_output=True, text=True)
-            ping_hypixel_result = float(ping_hypixel.stdout.split('\n')[-3].split(' = ')[-1].split('/')[0])
-            ping_china_result = float(ping_china.stdout.split('\n')[-3].split(' = ')[-1].split('/')[0])
+            ping_hypixel = ping('mc.hypixel.net')
+            ping_china = ping('www.baidu.com')
             data = {
-                'ping_hypixel': ping_hypixel_result,
-                'ping_china': ping_china_result,
-                'ping_total': ping_hypixel_result + ping_china_result,
+                'ping_hypixel': ping_hypixel,
+                'ping_china': ping_china,
+                'ping_total': ping_hypixel + ping_china,
                 'public_ip': '',
                 'location': ''
             }
@@ -29,6 +29,16 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode())
         else:
             self.send_error(404, 'Not Found')
+
+def ping(host):
+    start_time = time.time()
+    try:
+        socket.gethostbyname(host)
+    except socket.error:
+        return -1
+    else:
+        end_time = time.time()
+        return int((end_time - start_time) * 1000)
 
 PORT = 8080
 
