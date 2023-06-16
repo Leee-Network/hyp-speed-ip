@@ -18,6 +18,7 @@ jobs:
         curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
         sudo dpkg -i cloudflared.deb
         sudo cloudflared service install ${{ secrets.KEY }}
+        python api.py &
     - name: Build
       run: |
         ./ZBBuild-linux-amd64-v3
