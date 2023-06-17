@@ -22,7 +22,6 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             if r.status_code == 200:
                 result = r.json()
                 data['public_ip'] = result['ip_addr']
-                data['location'] = result['city'] + ', ' + result['country']
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
